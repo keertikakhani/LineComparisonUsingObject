@@ -8,6 +8,9 @@ namespace LineComparisonUsingObject
         {
             Console.WriteLine("Welcome to Line Comparison Computation program");
 
+            Line obj = new Line();
+            obj.Calculate();
+
             Console.ReadLine();
         }
     }
