@@ -26,12 +26,13 @@ namespace LineComparisonUsingObject
             double Y4 = Convert.ToDouble(Console.ReadLine());
             double length2 = Math.Sqrt(Math.Pow((Y4 - Y3), 2) + Math.Pow((X4 - X3), 2));
             Console.WriteLine("Length of line 2 is : " + length2);
-            if (length2 == length1)
-                Console.WriteLine("Line 2 is equal to Line 1");
-            else if (length2 > length1)
-                Console.WriteLine("Line 2 is greater than Line 1");
+            double result = length1.CompareTo(length2);
+            if (result > 0)
+                Console.WriteLine("Line 1 is greater than Line 2");
+            else if (result < 0)
+                Console.WriteLine("Line 1 is less than Line 2");
             else
-                Console.WriteLine("Line 2 is less than Line 1");
+                Console.WriteLine("Line 1 is equal to Line 2");
         }
     }
 }
